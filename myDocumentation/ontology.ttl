@@ -1,0 +1,1006 @@
+@prefix : <http://smarttourismontology.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://smarttourismontology.org#> .
+
+<http://smarttourismontology.org> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://smarttourismontology.org/1.0.0> ;
+                                   <http://purl.org/dc/terms/created> "2025-04-20"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "Raúl Castillo Hernández" ;
+                                   <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                   rdfs:comment "An ontology for representing smart tourism data and recommendations by place." ;
+                                   rdfs:label "Smart Tourism Ontology" ;
+                                   owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://smarttourismontology.org#hasName
+:hasName rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#cardinality
+owl:cardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://smarttourismontology.org#hasAttraction
+:hasAttraction rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isAttractionOf ;
+               rdfs:domain :City ;
+               rdfs:range :Attraction ;
+               rdfs:comment "Lists attractions available in a city." ;
+               rdfs:label "hasAttraction" .
+
+
+###  http://smarttourismontology.org#hasCity
+:hasCity rdf:type owl:ObjectProperty ;
+         rdfs:domain :TourismEntity ;
+         rdfs:range :City ;
+         rdfs:comment "Links an entity to the city where it is located." ;
+         rdfs:label "hasCity" .
+
+
+###  http://smarttourismontology.org#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isEventOf ;
+          rdfs:domain :City ;
+          rdfs:range :Event ;
+          rdfs:comment "States which events take place in a city." ;
+          rdfs:label "hasEvent" .
+
+
+###  http://smarttourismontology.org#hasHotel
+:hasHotel rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isHotelOf ;
+          rdfs:domain :City ;
+          rdfs:range :Hotel ;
+          rdfs:comment "Lists hotels available in a city." ;
+          rdfs:label "hasHotel" .
+
+
+###  http://smarttourismontology.org#hasRestaurant
+:hasRestaurant rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isRestaurantOf ;
+               rdfs:domain :City ;
+               rdfs:range :Restaurant ;
+               rdfs:comment "Lists restaurants available in a city." ;
+               rdfs:label "hasRestaurant" .
+
+
+###  http://smarttourismontology.org#hasTransport
+:hasTransport rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isTransportOf ;
+              rdfs:domain :City ;
+              rdfs:range :Transport ;
+              rdfs:comment "Lists transport services available in a city." ;
+              rdfs:label "hasTransport" .
+
+
+###  http://smarttourismontology.org#isAttractionOf
+:isAttractionOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Attraction ;
+                rdfs:range :City ;
+                rdfs:comment "Inverse of hasAttraction." ,
+                             "Links an attraction to the city it belongs to." ;
+                rdfs:label "isAttractionOf" .
+
+
+###  http://smarttourismontology.org#isEventOf
+:isEventOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :Event ;
+           rdfs:range :City ;
+           rdfs:comment "Inverse of hasEvent." ,
+                        "Links an event to the city it belongs to." ;
+           rdfs:label "isEventOf" .
+
+
+###  http://smarttourismontology.org#isHotelOf
+:isHotelOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :Hotel ;
+           rdfs:range :City ;
+           rdfs:comment "Inverse of hasHotel." ,
+                        "Links a hotel to the city it belongs to." ;
+           rdfs:label "isHotelOf" .
+
+
+###  http://smarttourismontology.org#isLocatedIn
+:isLocatedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :TourismEntity ;
+             rdfs:range :City ;
+             rdfs:comment "Inverse of hasCity." ,
+                          "Links a city to an entity located in it." ;
+             rdfs:label "isLocatedIn" .
+
+
+###  http://smarttourismontology.org#isNearby
+:isNearby rdf:type owl:ObjectProperty ;
+          rdfs:domain :Hotel ;
+          rdfs:range :Attraction ;
+          rdfs:comment "Indicates that a hotel and an attraction are near each other." ;
+          rdfs:label "isNearby" .
+
+
+###  http://smarttourismontology.org#isRestaurantOf
+:isRestaurantOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Restaurant ;
+                rdfs:range :City ;
+                rdfs:comment "Inverse of hasRestaurant." ,
+                             "Links a restaurant to the city it belongs to." ;
+                rdfs:label "isRestaurantOf" .
+
+
+###  http://smarttourismontology.org#isTransportOf
+:isTransportOf rdf:type owl:ObjectProperty ;
+               rdfs:domain :Transport ;
+               rdfs:range :City ;
+               rdfs:comment "Inverse of hasTransport." ,
+                            "Links transport to the city it belongs to." ;
+               rdfs:label "isTransportOf" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://smarttourismontology.org#hasAverageCost
+:hasAverageCost rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Transport ;
+                rdfs:range xsd:double ;
+                rdfs:comment "Average cost of using this transport mode." ;
+                rdfs:label "hasAverageCost" .
+
+
+###  http://smarttourismontology.org#hasAveragePrice
+:hasAveragePrice rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Restaurant ;
+                 rdfs:range xsd:double ;
+                 rdfs:comment "Average price per meal." ;
+                 rdfs:label "hasAveragePrice" .
+
+
+###  http://smarttourismontology.org#hasCoordinates
+:hasCoordinates rdf:type owl:DatatypeProperty ;
+                rdfs:domain :City ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Geographic coordinates in lat, long format." ;
+                rdfs:label "hasCoordinates" .
+
+
+###  http://smarttourismontology.org#hasDate
+:hasDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Event ;
+         rdfs:range xsd:date ;
+         rdfs:comment "Date when the event takes place." ;
+         rdfs:label "hasDate" .
+
+
+###  http://smarttourismontology.org#hasOperator
+:hasOperator rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Transport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Name of the company operating the transport." ;
+             rdfs:label "hasOperator" .
+
+
+###  http://smarttourismontology.org#hasPricePerNight
+:hasPricePerNight rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Hotel ;
+                  rdfs:range xsd:double ;
+                  rdfs:comment "Average price per night." ;
+                  rdfs:label "hasPricePerNight" .
+
+
+###  http://smarttourismontology.org#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TourismEntity ;
+           rdfs:range xsd:double ;
+           rdfs:comment "User-based average rating of the entity." ;
+           rdfs:label "hasRating" .
+
+
+###  http://smarttourismontology.org#hasStars
+:hasStars rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Hotel ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Star rating of the hotel (1 to 5)." ;
+          rdfs:label "hasStars" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://smarttourismontology.org#Attraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRating ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] .
+
+
+###  http://smarttourismontology.org#Beach
+:Beach rdf:type owl:Class ;
+       rdfs:subClassOf :Attraction ;
+       rdfs:comment "A beach is a landform alongside a body of water which consists of loose particles like sand or gravel." ;
+       rdfs:label "Beach" .
+
+
+###  http://smarttourismontology.org#BeachHotel
+:BeachHotel rdf:type owl:Class ;
+            rdfs:subClassOf :ByLocation ;
+            rdfs:comment "A beach hotel is a hotel located near or on a beach, often catering to tourists seeking coastal experiences." ;
+            rdfs:label "BeachHotel" .
+
+
+###  http://smarttourismontology.org#BudgetHotel
+:BudgetHotel rdf:type owl:Class ;
+             rdfs:subClassOf :ByCategory ;
+             owl:disjointWith :LuxuryHotel ;
+             rdfs:comment "A budget hotel is an affordable hotel offering basic accommodations and services." ;
+             rdfs:label "BudgetHotel" .
+
+
+###  http://smarttourismontology.org#Bus
+:Bus rdf:type owl:Class ;
+     rdfs:subClassOf :Transport ;
+     rdfs:comment "A bus is a road vehicle designed to carry many passengers along a set route." ;
+     rdfs:label "Bus" .
+
+
+###  http://smarttourismontology.org#ByCategory
+:ByCategory rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "A grouping for hotels based on service category, such as luxury or budget." ;
+            rdfs:label "ByCategory" .
+
+
+###  http://smarttourismontology.org#ByLocation
+:ByLocation rdf:type owl:Class ;
+            rdfs:subClassOf :Hotel ;
+            rdfs:comment "A grouping for hotels based on their location or surroundings." ;
+            rdfs:label "ByLocation" .
+
+
+###  http://smarttourismontology.org#City
+:City rdf:type owl:Class .
+
+
+###  http://smarttourismontology.org#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event .
+
+
+###  http://smarttourismontology.org#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasDate ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] .
+
+
+###  http://smarttourismontology.org#GastronomicEvent
+:GastronomicEvent rdf:type owl:Class ;
+                  rdfs:subClassOf :Event ;
+                  rdfs:comment "A gastronomic event, such as food festivals, tasting events, or culinary fairs." ;
+                  rdfs:label "Gastronomic Event" .
+
+
+###  http://smarttourismontology.org#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasRating ;
+                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                       ] .
+
+
+###  http://smarttourismontology.org#ItalianRestaurant
+:ItalianRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   owl:disjointWith :JapaneseRestaurant ,
+                                    :MexicanRestaurant ;
+                   rdfs:comment "An Italian restaurant serves cuisine originating from Italy." ;
+                   rdfs:label "ItalianRestaurant" .
+
+
+###  http://smarttourismontology.org#JapaneseRestaurant
+:JapaneseRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant ;
+                    owl:disjointWith :MexicanRestaurant ;
+                    rdfs:comment "A Japanese restaurant serves cuisine originating from Japan." ;
+                    rdfs:label "JapaneseRestaurant" .
+
+
+###  http://smarttourismontology.org#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :ByCategory ;
+             rdfs:comment "A luxury hotel is a high-end hotel that offers premium services, comfort, and amenities." ;
+             rdfs:label "LuxuryHotel" .
+
+
+###  http://smarttourismontology.org#Metro
+:Metro rdf:type owl:Class ;
+       rdfs:subClassOf :Transport .
+
+
+###  http://smarttourismontology.org#MexicanRestaurant
+:MexicanRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "A Mexican restaurant serves cuisine originating from Mexico." ;
+                   rdfs:label "MexicanRestaurant" .
+
+
+###  http://smarttourismontology.org#Monument
+:Monument rdf:type owl:Class ;
+          rdfs:subClassOf :Attraction .
+
+
+###  http://smarttourismontology.org#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Attraction .
+
+
+###  http://smarttourismontology.org#MusicEvent
+:MusicEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event .
+
+
+###  http://smarttourismontology.org#Park
+:Park rdf:type owl:Class ;
+      rdfs:subClassOf :Attraction .
+
+
+###  http://smarttourismontology.org#RecommendedHotel
+:RecommendedHotel rdf:type owl:Class ;
+                  rdfs:subClassOf :Hotel ;
+                  rdfs:comment "A hotel recommended based on user rating." ;
+                  rdfs:label "RecommendedHotel" .
+
+
+###  http://smarttourismontology.org#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRating ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] .
+
+
+###  http://smarttourismontology.org#SportsEvent
+:SportsEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "A sports event, such as matches, tournaments, or athletic competitions." ;
+             rdfs:label "Sports Event" .
+
+
+###  http://smarttourismontology.org#Taxi
+:Taxi rdf:type owl:Class ;
+      rdfs:subClassOf :Transport .
+
+
+###  http://smarttourismontology.org#TourismEntity
+:TourismEntity rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCity ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "An abstract class representing any touristic entity like Hotel, Restaurant, Event, etc." ;
+               rdfs:label "TourismEntity" .
+
+
+###  http://smarttourismontology.org#Tram
+:Tram rdf:type owl:Class ;
+      rdfs:subClassOf :Transport .
+
+
+###  http://smarttourismontology.org#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasAverageCost ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] .
+
+
+###  http://smarttourismontology.org#UrbanHotel
+:UrbanHotel rdf:type owl:Class ;
+            rdfs:subClassOf :ByLocation ;
+            rdfs:comment "An urban hotel is located in a city center and typically serves business or city-traveling guests." ;
+            rdfs:label "UrbanHotel" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/ontology/Attraction
+<http://dbpedia.org/ontology/Attraction> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :Attraction .
+
+
+###  http://smarttourismontology.org#Attraction
+
+###  http://dbpedia.org/ontology/City
+<http://dbpedia.org/ontology/City> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :City .
+
+
+###  http://smarttourismontology.org#City
+
+###  http://dbpedia.org/ontology/CulturalEvent
+<http://dbpedia.org/ontology/CulturalEvent> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :CulturalEvent .
+
+
+###  http://smarttourismontology.org#CulturalEvent
+
+###  http://dbpedia.org/ontology/Event
+<http://dbpedia.org/ontology/Event> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :Event .
+
+
+###  http://smarttourismontology.org#Event
+
+###  http://dbpedia.org/ontology/Hotel
+<http://dbpedia.org/ontology/Hotel> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs :Hotel .
+
+
+###  http://smarttourismontology.org#Hotel
+
+###  http://dbpedia.org/ontology/Monument
+<http://dbpedia.org/ontology/Monument> rdf:type owl:NamedIndividual ;
+                                       owl:sameAs :Monument .
+
+
+###  http://smarttourismontology.org#Monument
+
+###  http://dbpedia.org/ontology/Museum
+<http://dbpedia.org/ontology/Museum> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs :Museum .
+
+
+###  http://smarttourismontology.org#Museum
+
+###  http://dbpedia.org/ontology/MusicFestival
+<http://dbpedia.org/ontology/MusicFestival> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :MusicEvent .
+
+
+###  http://smarttourismontology.org#MusicEvent
+
+###  http://dbpedia.org/ontology/Park
+<http://dbpedia.org/ontology/Park> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :Park .
+
+
+###  http://smarttourismontology.org#Park
+
+###  http://dbpedia.org/ontology/Restaurant
+<http://dbpedia.org/ontology/Restaurant> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :Restaurant .
+
+
+###  http://smarttourismontology.org#Restaurant
+
+###  http://dbpedia.org/ontology/SubwaySystem
+<http://dbpedia.org/ontology/SubwaySystem> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs :Metro .
+
+
+###  http://smarttourismontology.org#Metro
+
+###  http://dbpedia.org/ontology/Taxi
+<http://dbpedia.org/ontology/Taxi> rdf:type owl:NamedIndividual ;
+                                   owl:sameAs :Taxi .
+
+
+###  http://smarttourismontology.org#Taxi
+
+###  http://dbpedia.org/ontology/TramStation
+<http://dbpedia.org/ontology/TramStation> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :Tram .
+
+
+###  http://smarttourismontology.org#Tram
+
+###  http://dbpedia.org/ontology/Transport
+<http://dbpedia.org/ontology/Transport> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :Transport .
+
+
+###  http://smarttourismontology.org#Transport
+
+###  http://dbpedia.org/resource/Madrid
+<http://dbpedia.org/resource/Madrid> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs :madrid .
+
+
+###  http://smarttourismontology.org#madrid
+
+###  http://dbpedia.org/resource/Málaga
+<http://dbpedia.org/resource/Málaga> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs :malaga .
+
+
+###  http://smarttourismontology.org#malaga
+
+###  http://dbpedia.org/resource/Pamplona
+<http://dbpedia.org/resource/Pamplona> rdf:type owl:NamedIndividual ;
+                                       owl:sameAs :pamplona .
+
+
+###  http://smarttourismontology.org#pamplona
+
+###  http://dbpedia.org/resource/Restaurant
+<http://dbpedia.org/resource/Restaurant> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :restaurante_fusion_pamplona ,
+                                                    :restaurante_sabor_sevilla .
+
+
+###  http://smarttourismontology.org#restaurante_fusion_pamplona
+
+###  http://smarttourismontology.org#restaurante_sabor_sevilla
+
+###  http://dbpedia.org/resource/Seville
+<http://dbpedia.org/resource/Seville> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs :sevilla .
+
+
+###  http://smarttourismontology.org#sevilla
+
+###  http://dbpedia.org/resource/Tram_in_Madrid
+<http://dbpedia.org/resource/Tram_in_Madrid> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :tranvia_madrid .
+
+
+###  http://smarttourismontology.org#tranvia_madrid
+
+###  http://dbpedia.org/resource/Zaragoza
+<http://dbpedia.org/resource/Zaragoza> rdf:type owl:NamedIndividual ;
+                                       owl:sameAs :zaragoza .
+
+
+###  http://smarttourismontology.org#zaragoza
+
+###  http://dbpedia.org/resource/Toledo,_Spain
+<http://dbpedia.org/resource/Toledo,_Spain> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :toledo .
+
+
+###  http://smarttourismontology.org#toledo
+
+###  http://smarttourismontology.org#Attraction
+:Attraction rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#City
+:City rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#CulturalEvent
+:CulturalEvent rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Event
+:Event rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Hotel
+:Hotel rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Metro
+:Metro rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Monument
+:Monument rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Museum
+:Museum rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#MusicEvent
+:MusicEvent rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Park
+:Park rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Restaurant
+:Restaurant rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Taxi
+:Taxi rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Tram
+:Tram rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#Transport
+:Transport rdf:type owl:NamedIndividual .
+
+
+###  http://smarttourismontology.org#bilbao
+:bilbao rdf:type owl:NamedIndividual ,
+                 :City ;
+        :hasCoordinates "43.2630,-2.9350" ;
+        :hasName "Bilbao" .
+
+
+###  http://smarttourismontology.org#carnaval_sevilla
+:carnaval_sevilla rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :hasCity :sevilla ;
+                  :hasDate "2024-02-04"^^xsd:date ;
+                  :hasName "Carnaval Sevilla" .
+
+
+###  http://smarttourismontology.org#feria_malaga
+:feria_malaga rdf:type owl:NamedIndividual ,
+                       :Event ;
+              :hasCity :malaga ;
+              :hasDate "2024-06-26"^^xsd:date ;
+              :hasName "Feria Málaga" .
+
+
+###  http://smarttourismontology.org#hotel_del_mar_malaga
+:hotel_del_mar_malaga rdf:type owl:NamedIndividual ,
+                               :Hotel ;
+                      :hasCity :malaga ;
+                      :hasPricePerNight "196.0"^^xsd:double ;
+                      :hasRating "4.8"^^xsd:double ;
+                      :hasStars 3 ;
+                      :hasName "Hotel Del Mar Málaga" .
+
+
+###  http://smarttourismontology.org#hotel_palace_toledo
+:hotel_palace_toledo rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :hasCity :toledo ;
+                     :hasPricePerNight "174.0"^^xsd:double ;
+                     :hasRating "4.7"^^xsd:double ;
+                     :hasStars 5 ;
+                     :hasName "Hotel Palace Toledo" .
+
+
+###  http://smarttourismontology.org#hotel_sol_barcelona
+:hotel_sol_barcelona rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :hasCity :madrid ;
+                     :hasPricePerNight "181.0"^^xsd:double ;
+                     :hasRating "5.0"^^xsd:double ;
+                     :hasStars 4 ;
+                     :hasName "Hotel Sol Barcelona" .
+
+
+###  http://smarttourismontology.org#hotel_vista_madrid
+:hotel_vista_madrid rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :hasCity :madrid ;
+                    :hasPricePerNight "150.0"^^xsd:double ;
+                    :hasRating "4.0"^^xsd:double ;
+                    :hasStars 4 ;
+                    :hasName "Hotel Vista Madrid" .
+
+
+###  http://smarttourismontology.org#madrid
+:madrid rdf:type owl:NamedIndividual ,
+                 :City ;
+        :hasCoordinates "40.4168,-3.7038" ;
+        :hasName "Madrid" .
+
+
+###  http://smarttourismontology.org#malaga
+:malaga rdf:type owl:NamedIndividual ,
+                 :City ;
+        :hasCoordinates "36.7213,-4.4214" ;
+        :hasName "Málaga" .
+
+
+###  http://smarttourismontology.org#museo_zaragoza
+:museo_zaragoza rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :hasCity :zaragoza ;
+                :hasRating "4.1"^^xsd:double ;
+                :hasName "Museo Zaragoza" .
+
+
+###  http://smarttourismontology.org#palacio_toledo
+:palacio_toledo rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :hasCity :toledo ;
+                :hasRating "3.8"^^xsd:double ;
+                :hasName "Palacio Toledo" .
+
+
+###  http://smarttourismontology.org#pamplona
+:pamplona rdf:type owl:NamedIndividual ,
+                   :City ;
+          :hasCoordinates "42.8169,-1.6444" ;
+          :hasName "Pamplona" .
+
+
+###  http://smarttourismontology.org#restaurante_delicia_pamplona
+:restaurante_delicia_pamplona rdf:type owl:NamedIndividual ,
+                                       :Restaurant ;
+                              :hasCity :pamplona ;
+                              :hasAveragePrice "41.0"^^xsd:double ;
+                              :hasRating "4.3"^^xsd:double ;
+                              :hasName "Restaurante Delicia Pamplona" .
+
+
+###  http://smarttourismontology.org#restaurante_fusion_pamplona
+:restaurante_fusion_pamplona rdf:type owl:NamedIndividual ,
+                                      :Restaurant ;
+                             :hasCity :pamplona ;
+                             :hasAveragePrice "15.0"^^xsd:double ;
+                             :hasRating "4.2"^^xsd:double ;
+                             :hasName "Restaurante Fusión Pamplona" .
+
+
+###  http://smarttourismontology.org#restaurante_sabor_sevilla
+:restaurante_sabor_sevilla rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :hasCity :sevilla ;
+                           :hasAveragePrice "80.0"^^xsd:double ;
+                           :hasRating "4.4"^^xsd:double ;
+                           :hasName "Restaurante Sabor Sevilla" .
+
+
+###  http://smarttourismontology.org#sevilla
+:sevilla rdf:type owl:NamedIndividual ,
+                  :City ;
+         :hasCoordinates "37.3886,-5.9823" ;
+         :hasName "Sevilla" .
+
+
+###  http://smarttourismontology.org#toledo
+:toledo rdf:type owl:NamedIndividual ,
+                 :City ;
+        :hasCoordinates "39.8628,-4.0273" ;
+        :hasName "Toledo" .
+
+
+###  http://smarttourismontology.org#tranvia_madrid
+:tranvia_madrid rdf:type owl:NamedIndividual ,
+                         :Transport ;
+                :hasCity :madrid ;
+                :hasAverageCost "5.09"^^xsd:double ;
+                :hasOperator "Movi Madrid" .
+
+
+###  http://smarttourismontology.org#zaragoza
+:zaragoza rdf:type owl:NamedIndividual ,
+                   :City ;
+          :hasCoordinates "41.6488,-0.8891" ;
+          :hasName "Zaragoza" .
+
+
+[ owl:cardinality "1"^^xsd:nonNegativeInteger
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Attraction rdfs:comment "An attraction is a place of interest visited by tourists due to its cultural, historical, or natural value." ;
+             rdfs:label "Attraction" .
+
+
+:City rdfs:comment "A city is an urban area where tourist entities like hotels, restaurants, and events are located." ;
+      rdfs:label "City" .
+
+
+:CulturalEvent rdfs:comment "A cultural event is an activity that promotes cultural heritage, arts, or traditions." ;
+               rdfs:label "CulturalEvent" .
+
+
+:Event rdfs:comment "An event is a planned occasion such as a festival, concert, or exhibition, often open to the public." ;
+       rdfs:label "Event" .
+
+
+:Hotel rdfs:comment "A hotel is an establishment that provides lodging, often with additional services such as meals and entertainment." ;
+       rdfs:label "Hotel" .
+
+
+:Metro rdfs:comment "A metro is an underground or elevated rapid transit system used for urban transportation." ;
+       rdfs:label "Metro" .
+
+
+:Monument rdfs:comment "A monument is a structure created to commemorate a person or event and is of historical significance." ;
+          rdfs:label "Monument" .
+
+
+:Museum rdfs:comment "A museum is an institution that conserves a collection of artifacts and other objects of artistic, cultural, or scientific importance." ;
+        rdfs:label "Museum" .
+
+
+:MusicEvent rdfs:comment "A music event is a performance or gathering focused on musical acts." ;
+            rdfs:label "MusicEvent" .
+
+
+:Park rdfs:comment "A park is a public green space in a city designed for recreation and enjoyment." ;
+      rdfs:label "Park" .
+
+
+:Restaurant rdfs:comment "A restaurant is a place where meals are prepared and served to customers." ;
+            rdfs:label "Restaurant" .
+
+
+:Taxi rdfs:comment "A taxi is a private vehicle for hire with a driver, used by a single passenger or group." ;
+      rdfs:label "Taxi" .
+
+
+:Tram rdfs:comment "A tram is a rail vehicle that runs on tracks along public streets and is used for city transport." ;
+      rdfs:label "Tram" .
+
+
+:Transport rdfs:comment "Transport refers to means of moving people or goods from one place to another within or across cities." ;
+           rdfs:label "Transport" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.w3.org/2002/07/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<file:///mnt/data/5> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<file:///mnt/data/4.5> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCity ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCity ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Attraction ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/a>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isNearby ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRating ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> ( <http://www.w3.org/2002/07/r>
+                                                                                                                          <file:///mnt/data/4.5>
+                                                                                                                        )
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecommendedHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> ( <http://www.w3.org/2002/07/s>
+                                                                                                               <file:///mnt/data/5>
+                                                                                                             )
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasStars ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/s>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LuxuryHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

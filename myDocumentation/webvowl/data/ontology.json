@@ -1,0 +1,1429 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://smarttourismontology.org" ],
+    "iri" : "http://smarttourismontology.org",
+    "version" : "v1.0.0",
+    "author" : [ "Raúl Castillo Hernández" ],
+    "labels" : {
+      "undefined" : "Smart Tourism Ontology"
+    },
+    "comments" : {
+      "undefined" : "An ontology for representing smart tourism data and recommendations by place."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Raúl Castillo Hernández",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-20",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://smarttourismontology.org#Taxi",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Taxi",
+      "undefined" : "Taxi"
+    },
+    "comment" : {
+      "undefined" : "A taxi is a private vehicle for hire with a driver, used by a single passenger or group."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Metro",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metro",
+      "undefined" : "Metro"
+    },
+    "comment" : {
+      "undefined" : "A metro is an underground or elevated rapid transit system used for urban transportation."
+    },
+    "id" : "8",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Museum",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Museum",
+      "undefined" : "Museum"
+    },
+    "comment" : {
+      "undefined" : "A museum is an institution that conserves a collection of artifacts and other objects of artistic, cultural, or scientific importance."
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Attraction",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attraction",
+      "undefined" : "Attraction"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#palacio_toledo",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Palacio Toledo",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "palacio_toledo"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#museo_zaragoza",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Museo Zaragoza",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "museo_zaragoza"
+      }
+    } ],
+    "subClasses" : [ "9", "22", "23", "24" ],
+    "comment" : {
+      "undefined" : "An attraction is a place of interest visited by tourists due to its cultural, historical, or natural value."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://smarttourismontology.org#MusicEvent",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicEvent",
+      "undefined" : "MusicEvent"
+    },
+    "comment" : {
+      "undefined" : "A music event is a performance or gathering focused on musical acts."
+    },
+    "id" : "16",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#ItalianRestaurant",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ItalianRestaurant",
+      "undefined" : "ItalianRestaurant"
+    },
+    "comment" : {
+      "undefined" : "An Italian restaurant serves cuisine originating from Italy."
+    },
+    "id" : "36",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Tram",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tram",
+      "undefined" : "Tram"
+    },
+    "comment" : {
+      "undefined" : "A tram is a rail vehicle that runs on tracks along public streets and is used for city transport."
+    },
+    "id" : "37",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#UrbanHotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UrbanHotel",
+      "undefined" : "UrbanHotel"
+    },
+    "comment" : {
+      "undefined" : "An urban hotel is located in a city center and typically serves business or city-traveling guests."
+    },
+    "id" : "46",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Monument",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Monument",
+      "undefined" : "Monument"
+    },
+    "comment" : {
+      "undefined" : "A monument is a structure created to commemorate a person or event and is of historical significance."
+    },
+    "id" : "23",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#TourismEntity",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TourismEntity",
+      "undefined" : "TourismEntity"
+    },
+    "comment" : {
+      "undefined" : "An abstract class representing any touristic entity like Hotel, Restaurant, Event, etc."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "65",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://smarttourismontology.org#ByLocation",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ByLocation",
+      "undefined" : "ByLocation"
+    },
+    "subClasses" : [ "57", "46" ],
+    "comment" : {
+      "undefined" : "A grouping for hotels based on their location or surroundings."
+    },
+    "id" : "43",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Transport",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transport",
+      "undefined" : "Transport"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#tranvia_madrid",
+      "baseIri" : "http://smarttourismontology.org",
+      "labels" : {
+        "IRI-based" : "tranvia_madrid"
+      }
+    } ],
+    "subClasses" : [ "0", "53", "37", "8" ],
+    "comment" : {
+      "undefined" : "Transport refers to means of moving people or goods from one place to another within or across cities."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://smarttourismontology.org#Bus",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bus",
+      "undefined" : "Bus"
+    },
+    "comment" : {
+      "undefined" : "A bus is a road vehicle designed to carry many passengers along a set route."
+    },
+    "id" : "53",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://smarttourismontology.org#GastronomicEvent",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GastronomicEvent",
+      "undefined" : "Gastronomic Event"
+    },
+    "comment" : {
+      "undefined" : "A gastronomic event, such as food festivals, tasting events, or culinary fairs."
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://smarttourismontology.org#Park",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Park",
+      "undefined" : "Park"
+    },
+    "comment" : {
+      "undefined" : "A park is a public green space in a city designed for recreation and enjoyment."
+    },
+    "id" : "22",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#CulturalEvent",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalEvent",
+      "undefined" : "CulturalEvent"
+    },
+    "comment" : {
+      "undefined" : "A cultural event is an activity that promotes cultural heritage, arts, or traditions."
+    },
+    "id" : "33",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#City",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "City",
+      "undefined" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#sevilla",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Sevilla",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "sevilla"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#bilbao",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Bilbao",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "bilbao"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#madrid",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Madrid",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "madrid"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#zaragoza",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Zaragoza",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "zaragoza"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#malaga",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Málaga",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "malaga"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#toledo",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Toledo",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "toledo"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#pamplona",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Pamplona",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "pamplona"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A city is an urban area where tourist entities like hotels, restaurants, and events are located."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://smarttourismontology.org#Hotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hotel",
+      "undefined" : "Hotel"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#hotel_del_mar_malaga",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Hotel Del Mar Málaga",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hotel_del_mar_malaga"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#hotel_sol_barcelona",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Hotel Sol Barcelona",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hotel_sol_barcelona"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#hotel_palace_toledo",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Hotel Palace Toledo",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hotel_palace_toledo"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#hotel_vista_madrid",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Hotel Vista Madrid",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "hotel_vista_madrid"
+      }
+    } ],
+    "subClasses" : [ "43", "28", "30" ],
+    "comment" : {
+      "undefined" : "A hotel is an establishment that provides lodging, often with additional services such as meals and entertainment."
+    },
+    "id" : "31"
+  }, {
+    "iri" : "http://smarttourismontology.org#ByCategory",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ByCategory",
+      "undefined" : "ByCategory"
+    },
+    "subClasses" : [ "27", "35" ],
+    "comment" : {
+      "undefined" : "A grouping for hotels based on service category, such as luxury or budget."
+    },
+    "id" : "28",
+    "superClasses" : [ "31" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Event",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#feria_malaga",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Feria Málaga",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "feria_malaga"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#carnaval_sevilla",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Carnaval Sevilla",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "carnaval_sevilla"
+      }
+    } ],
+    "subClasses" : [ "33", "18", "16", "3" ],
+    "comment" : {
+      "undefined" : "An event is a planned occasion such as a festival, concert, or exhibition, often open to the public."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://smarttourismontology.org#SportsEvent",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SportsEvent",
+      "undefined" : "Sports Event"
+    },
+    "comment" : {
+      "undefined" : "A sports event, such as matches, tournaments, or athletic competitions."
+    },
+    "id" : "18",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Restaurant",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "undefined" : "Restaurant"
+    },
+    "individuals" : [ {
+      "iri" : "http://smarttourismontology.org#restaurante_sabor_sevilla",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Restaurante Sabor Sevilla",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "restaurante_sabor_sevilla"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#restaurante_delicia_pamplona",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Restaurante Delicia Pamplona",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "restaurante_delicia_pamplona"
+      }
+    }, {
+      "iri" : "http://smarttourismontology.org#restaurante_fusion_pamplona",
+      "baseIri" : "http://smarttourismontology.org",
+      "annotations" : {
+        "hasName" : [ {
+          "identifier" : "hasName",
+          "language" : "undefined",
+          "value" : "Restaurante Fusión Pamplona",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "restaurante_fusion_pamplona"
+      }
+    } ],
+    "subClasses" : [ "70", "36", "68" ],
+    "comment" : {
+      "undefined" : "A restaurant is a place where meals are prepared and served to customers."
+    },
+    "id" : "12"
+  }, {
+    "iri" : "http://smarttourismontology.org#MexicanRestaurant",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MexicanRestaurant",
+      "undefined" : "MexicanRestaurant"
+    },
+    "comment" : {
+      "undefined" : "A Mexican restaurant serves cuisine originating from Mexico."
+    },
+    "id" : "68",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#LuxuryHotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LuxuryHotel",
+      "undefined" : "LuxuryHotel"
+    },
+    "comment" : {
+      "undefined" : "A luxury hotel is a high-end hotel that offers premium services, comfort, and amenities."
+    },
+    "id" : "35",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#BudgetHotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BudgetHotel",
+      "undefined" : "BudgetHotel"
+    },
+    "comment" : {
+      "undefined" : "A budget hotel is an affordable hotel offering basic accommodations and services."
+    },
+    "id" : "27",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#BeachHotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BeachHotel",
+      "undefined" : "BeachHotel"
+    },
+    "comment" : {
+      "undefined" : "A beach hotel is a hotel located near or on a beach, often catering to tourists seeking coastal experiences."
+    },
+    "id" : "57",
+    "superClasses" : [ "43" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#JapaneseRestaurant",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JapaneseRestaurant",
+      "undefined" : "JapaneseRestaurant"
+    },
+    "comment" : {
+      "undefined" : "A Japanese restaurant serves cuisine originating from Japan."
+    },
+    "id" : "70",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#Beach",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Beach",
+      "undefined" : "Beach"
+    },
+    "comment" : {
+      "undefined" : "A beach is a landform alongside a body of water which consists of loose particles like sand or gravel."
+    },
+    "id" : "24",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://smarttourismontology.org#RecommendedHotel",
+    "baseIri" : "http://smarttourismontology.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecommendedHotel",
+      "undefined" : "RecommendedHotel"
+    },
+    "comment" : {
+      "undefined" : "A hotel recommended based on user rating."
+    },
+    "id" : "30",
+    "superClasses" : [ "31" ]
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "69",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "77",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasCity",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasCity",
+      "undefined" : "hasCity"
+    },
+    "cardinality" : "1",
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Links an entity to the city where it is located."
+    },
+    "attributes" : [ "object" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasRestaurant",
+    "inverse" : "13",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasRestaurant",
+      "undefined" : "hasRestaurant"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Lists restaurants available in a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://smarttourismontology.org#isEventOf",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isEventOf",
+      "undefined" : "isEventOf"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Inverse of hasEvent."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "range" : "4",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "4",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://smarttourismontology.org#isTransportOf",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isTransportOf",
+      "undefined" : "isTransportOf"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Links transport to the city it belongs to."
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasAverageCost",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasAverageCost",
+      "undefined" : "hasAverageCost"
+    },
+    "minCardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Average cost of using this transport mode."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://smarttourismontology.org#isLocatedIn",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isLocatedIn",
+      "undefined" : "isLocatedIn"
+    },
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "Links a city to an entity located in it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "4",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "28",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "1",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "31",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasTransport",
+    "inverse" : "19",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasTransport",
+      "undefined" : "hasTransport"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Lists transport services available in a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "31",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasAttraction",
+    "inverse" : "45",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasAttraction",
+      "undefined" : "hasAttraction"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Lists attractions available in a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://smarttourismontology.org#isNearby",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "isNearby",
+      "undefined" : "isNearby"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Indicates that a hotel and an attraction are near each other."
+    },
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "43",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasOperator",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "hasOperator",
+      "undefined" : "hasOperator"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Name of the company operating the transport."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "50"
+  }, {
+    "range" : "1",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "10",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "10",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "43",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasAveragePrice",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "hasAveragePrice",
+      "undefined" : "hasAveragePrice"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Average price per meal."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://smarttourismontology.org#isRestaurantOf",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isRestaurantOf",
+      "undefined" : "isRestaurantOf"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "Inverse of hasRestaurant."
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasHotel",
+    "inverse" : "61",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "hasHotel",
+      "undefined" : "hasHotel"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Lists hotels available in a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "60"
+  }, {
+    "range" : "10",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasRating",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasRating",
+      "undefined" : "hasRating"
+    },
+    "minCardinality" : "1",
+    "domain" : "6",
+    "comment" : {
+      "undefined" : "User-based average rating of the entity."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "range" : "68",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "68",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://smarttourismontology.org#isAttractionOf",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isAttractionOf",
+      "undefined" : "isAttractionOf"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "Links an attraction to the city it belongs to."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasDate",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "hasDate",
+      "undefined" : "hasDate"
+    },
+    "cardinality" : "1",
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Date when the event takes place."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasPricePerNight",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "hasPricePerNight",
+      "undefined" : "hasPricePerNight"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Average price per night."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "range" : "35",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "70",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasCoordinates",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "hasCoordinates",
+      "undefined" : "hasCoordinates"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "Geographic coordinates in lat, long format."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasStars",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasStars",
+      "undefined" : "hasStars"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Star rating of the hotel (1 to 5)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "range" : "12",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://smarttourismontology.org#hasEvent",
+    "inverse" : "14",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasEvent",
+      "undefined" : "hasEvent"
+    },
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "States which events take place in a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "range" : "12",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://smarttourismontology.org#isHotelOf",
+    "baseIri" : "http://smarttourismontology.org",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isHotelOf",
+      "undefined" : "isHotelOf"
+    },
+    "domain" : "31",
+    "comment" : {
+      "undefined" : "Inverse of hasHotel."
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "range" : "12",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  } ]
+}
